@@ -2,61 +2,65 @@
 # Copy sections into your site config.toml and replace placeholders.
 # For running the site, see the Portfolio repo README: https://github.com/felipecordero/felipecordero.github.io
 
-baseURL = "https://yoursite.com"
-languageCode = "en-us"
-title = "Your Name"
+baseURL = "https://hyangnamdexter.github.io/MyWebPages/"
+languageCode = "ko-KR"
+title = "이승환"
 
-defaultContentLanguage = "en"
+defaultContentLanguage = "ko"
 defaultContentLanguageInSubdir = false
 
+
 [languages]
-  [languages.en]
-    contentDir = "content/en"
-    languageName = "English"
+  [languages.ko]
+    languageName = "한국어"
     weight = 1
-    [languages.en.params]
-      tagline = "First sentence. Second sentence cycles in the same block (wraps to ~2 lines)."
-      hero_description = "Short bio for the hero section."
-      hero_location = "City, Country"
-      collab_tags = ["Tag 1", "Tag 2", "Tag 3"]
-  # Add more [languages.xx] blocks for other languages (es, fr, etc.)
+    [languages.ko.params]
+      tagline = "학부 연구생입니다. 엣지 서버 캐싱을 공부하고 있습니다."
+      hero_description = "사용자 응답 지연을 줄이는 캐시 배치 방법을 공부하고 있습니다."
+      hero_location = "전주, 대한민국"
+
 
 [build]
   writeStats = true
 
 [params]
-  name = "Your Name"
-  email = "your@email.com"
-  profile_image = "/images/your-profile.jpg"
-  author = "Your Name"
-  og_image = "images/your-og.png"
-  description = "One-line site description for SEO."
-  linkedin_url = "https://linkedin.com/in/yourprofile"
-  linkedin_text = "linkedin.com/in/yourprofile"
-  github_url = "https://github.com/yourusername"
-  github_text = "github.com/yourusername"
+  name = "이승환"
+  firstName = "이승환"
+  lastName = ""
+  email = "a031122@jbnu.ac.kr"
+  profile_image = "images/profile.jpg"
+  author = "이승환"
+  description = "이승환의 개인 소개 사이트"
+  github_url = "https://github.com/HyangnamDexter"
+  github_text = "github.com/HyangnamDexter"
   calendly_url = ""
   calendly_height = "700px"
-  copyright = "© 2025 | Your Name"
-  resume_url_en = "/files/your-cv-en.pdf"
-  resume_url_fr = "/files/your-cv-fr.pdf"
-  resume_label = "View CV"
-  sectionPagesMenu = "main"
+  copyright = "© 2026 | 이승환"
   formspreeendpoint = ""
   pexelsapikey = ""
 
   [[params.social]]
-    icon = "linkedin-in"
-    url = "https://linkedin.com/in/yourprofile"
-  [[params.social]]
     icon = "github"
-    url = "https://github.com/yourusername"
-  # [[params.social]]
-  #   icon = "calendly"
-  #   url = "https://calendly.com/yourlink"
+    url = "https://github.com/HyangnamDexter"
+
+[[menus.main]]
+  name = "소개"
+  url = "#about"
+  weight = 1
+
+[[menus.main]]
+  name = "활동"
+  url = "#experience"
+  weight = 2
+
+[[menus.main]]
+  name = "연락"
+  url = "#contact"
+  weight = 3
 
 [taxonomies]
   tag = "tags"
+
 
 [markup]
   [markup.goldmark]
